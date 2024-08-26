@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Palabras</title>
+    <link rel="stylesheet" href="Style/Style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <img src="img/logo_alura.png" alt="Logo" class="logo"> <!-- Logo aquí -->
+            <div class="left-side">
+                <div class="textarea-container">
+                    <textarea style="background-color: #F3F5FC;" id="inputText" placeholder="Ingrese el texto aquí"></textarea>                
+                </div>
+                <div class="indicator">
+                    <img src="img/indicador.png" alt="Icono" class="icon">
+                    <p> Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="buttons">
+                    <button class="encrypt" onclick="encrypt()">Encriptar</button>
+                    <button class="decrypt" onclick="decrypt()">Desencriptar</button>
+                </div>
+            </div>
+            <div class="right-side">
+                <textarea style="background-color: white;" id="outputText" readonly></textarea>
+                <div id="placeholderImage" class="placeholder-image">
+                    <img src="img/mensaje.png" alt="Placeholder Image">
+                    <p id="noMessageText">Ningún mensaje fue encontrado</p>
+                    <p class="subtitle">Ingresa el texto que desees encriptar o desencriptar.</p> 
+                </div>
+                <button class="copy" onclick="copyText()">Copiar</button>
+            </div>
+        </div>
+    </div>
+    <footer>  
+        <p class="pie">Encriptador creado por Helver García 2024.</p>
+    </footer>
+
+    <script src="Js/script.js"></script>
+</body>
+</html>

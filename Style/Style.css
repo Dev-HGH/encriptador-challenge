@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F3F5FC;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.background {
+    flex: 1;
+    width: 1440px;
+    height: 1024px;
+    background-color: #F3F5FC;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 120px;
+    height: 48px;
+    z-index: 2;
+}
+
+.left-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right-side {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 400px;
+}
+
+.textarea-container {
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+textarea {
+    width: 100%;
+    height: 80%;
+    font-size: 32px;
+    font-family: "Inter", sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    resize: none;
+    color: #0A3871;
+    border: none;
+    border-radius: 4px;
+}
+
+textarea::placeholder {
+    color: #0A3871;
+}
+
+textarea#outputText {
+    width: 400px;
+    height: 944px;
+    font-size: 32px;
+    padding: 30px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    resize: none;
+    color: #495057;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+textarea#inputText {
+    width: 680px;
+    height: 288px;
+    font-size: 32px;
+    padding: 10px;
+    margin-top: 168px;
+    margin-left: 240px;
+    box-sizing: border-box;
+    resize: none;
+    color: #0A3871;
+    background-color: #F3F5FC;
+    border-radius: 32px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #495057;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.placeholder-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+    width: 80%;
+    height: auto;
+    text-align: center;
+}
+
+#noMessageText {
+    font-size: 24px;
+    color: #343A40;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    width: 680px;
+    margin-left: 240px;
+    gap: 24px;
+    align-content: center;
+    margin-top: -80px;
+}
+
+.copy {
+    display: none;
+    position: absolute;
+    bottom: 24px;
+    align-self: center;
+    font-size: 16px;
+    border: solid 1px #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 336px;
+    margin-top: 370px;
+    color: #0A3871;
+    background-color: white;
+    padding: 24px;
+}
+
+.copy:hover {
+    opacity: 0.8;
+}
+
+button {
+    padding: 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: solid 1px #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    flex: 1;
+}
+
+button.encrypt {
+    background-color: #0A3871;
+    color: white;
+    margin-top: 80px;
+}
+
+button.decrypt {
+    background-color: #D8DFE8;
+    color: #0A3871;
+    margin-top: 80px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.indicator {
+    width: 300px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    color: #495057;
+    margin-left: -120px;
+}
+
+.indicator .icon {
+    width: 16px;
+    height: 16px;
+    padding: 5px;
+}
+
+footer {
+    background-color: #0056b3;
+    width: 100%;
+    height: 50px;
+    color: #F3F5FC;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+}
+
+@media (max-width: 1024px) {
+    .background {
+        width: 100%;
+        height: auto;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side, .right-side {
+        width: 90%;
+    }
+
+    .logo {
+        width: 80px;
+        height: auto;
+        top: 20px;
+        left: 20px;
+    }
+
+    textarea#inputText, textarea#outputText {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .buttons {
+        width: 100%;
+        margin-left: 0;
+        gap: 16px;
+    }
+
+    .copy {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .background {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        width: 100px;
+        height: 40px;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        margin: 0;
+    }
+
+    textarea#inputText {
+        width: 100%;
+        height: 200px;
+        font-size: 24px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    textarea#outputText {
+        width: 100%;
+        height: 400px;
+        font-size: 24px;
+        margin-top: 20px;
+        background-color: white;
+        box-shadow: none;
+    }
+
+    .buttons {
+        width: 100%;
+        margin-left: 0;
+        gap: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 16px;
+    }
+
+    .copy {
+        width: 100%;
+        margin-top: 20px;
+        padding: 16px;
+    }
+
+    footer {
+        position: relative;
+        margin-top: 20px;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .placeholder-image {
+        display: none;
+    }
+    
+    #noMessageText,
+    .subtitle {
+        display: block;
+    }
+}
